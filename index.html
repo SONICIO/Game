@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<title>SONICIO</title>
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -16,7 +17,7 @@ var myGamePiece;
 var myBackground;
 
 function startGame() {
-    myGamePiece = new component(30, 30, "smiley.gif", 10, 120, "image");
+    myGamePiece = new component(30, 30, "https://raw.githubusercontent.com/SONICIO/Game/master/imageedit_4_9726841900.png", 10, 120, "image");
     myBackground = new component(656, 270, "https://raw.githubusercontent.com/SONICIO/Game/master/bg.png", 0, 0, "background");
     myGameArea.start();
 }
@@ -90,7 +91,7 @@ function updateGameArea() {
 }
 
 function move(dir) {
-    myGamePiece.image.src = "angry.gif";
+    myGamePiece.image.src = "https://raw.githubusercontent.com/SONICIO/Game/master/imageedit_4_9726841900.png";
     if (dir == "up") {myGamePiece.speedY = -1; }
     if (dir == "down") {myGamePiece.speedY = 1; }
     if (dir == "left") {myGamePiece.speedX = -1; }
@@ -98,7 +99,7 @@ function move(dir) {
 }
 
 function clearmove() {
-    myGamePiece.image.src = "smiley.gif";
+    myGamePiece.image.src = "https://raw.githubusercontent.com/SONICIO/Game/master/imageedit_4_9726841900.png";
     myGamePiece.speedX = 0; 
     myGamePiece.speedY = 0; 
 }
@@ -109,8 +110,5 @@ function clearmove() {
   <button onmousedown="move('right')" onmouseup="clearmove()" ontouchstart="move('right')">RIGHT</button><br><br>
   <button onmousedown="move('down')" onmouseup="clearmove()" ontouchstart="move('down')">DOWN</button>
 </div>
-
-<p>The background will go on looping forever.</p>
-<p>You should choose a background which overlaps better than in this example.</p>
 </body>
 </html>
